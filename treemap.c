@@ -187,7 +187,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
+Pair * upperBound(TreeMap * tree, void* key) 
+{
+    //TreeNode *aux = tree->root;
+    //TreeNode *ubNode;
+    
+    Pair *pairBuscado = searchTreeMap(tree, key);
+
+    if (pairBuscado != NULL) return pairBuscado;
+
     return NULL;
 }
 

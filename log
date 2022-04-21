@@ -1,0 +1,9 @@
+Thu Apr 21 15:22:24 -04 2022: 
+ treemap.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+test.c:506:9: error: variable 'all_correct' set but not used [-Werror,-Wunused-but-set-variable]
+    int all_correct=1;
+        ^
+1 error generated.
+Compilation failed
+0af1922

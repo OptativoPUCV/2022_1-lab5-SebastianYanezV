@@ -7,3 +7,7 @@ test.c:506:9: error: variable 'all_correct' set but not used [-Werror,-Wunused-b
 1 error generated.
 Compilation failed
 0af1922
+Thu Apr 21 15:25:48 -04 2022: 
+ tests:  4|7
+total_score: 5/70
+4b523d7

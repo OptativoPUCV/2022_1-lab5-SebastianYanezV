@@ -86,3 +86,76 @@ Thu Apr 21 16:41:22 -04 2022:
  tests:  15|4
 total_score: 25/70
 8bf235b
+Thu Apr 21 16:49:27 -04 2022: 
+ treemap.c | 39 ++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 38 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+./treemap.c:109:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->left)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~
+./treemap.c:109:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->left)
+                 ^
+            (                        )
+./treemap.c:109:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->left)
+                 ^
+                 ==
+./treemap.c:114:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->right)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~~
+./treemap.c:114:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->right)
+                 ^
+            (                         )
+./treemap.c:114:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->right)
+                 ^
+                 ==
+./treemap.c:123:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->left)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~
+./treemap.c:123:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->left)
+                 ^
+            (                        )
+./treemap.c:123:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->left)
+                 ^
+                 ==
+./treemap.c:128:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->right)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~~
+./treemap.c:128:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->right)
+                 ^
+            (                         )
+./treemap.c:128:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->right)
+                 ^
+                 ==
+./treemap.c:137:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->left)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~
+./treemap.c:137:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->left)
+                 ^
+            (                        )
+./treemap.c:137:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->left)
+                 ^
+                 ==
+./treemap.c:142:18: error: using the result of an assignment as a condition without parentheses [-Werror,-Wparentheses]
+        if (node = node->parent->right)
+            ~~~~~^~~~~~~~~~~~~~~~~~~~~
+./treemap.c:142:18: note: place parentheses around the assignment to silence this warning
+        if (node = node->parent->right)
+                 ^
+            (                         )
+./treemap.c:142:18: note: use '==' to turn this assignment into an equality comparison
+        if (node = node->parent->right)
+                 ^
+                 ==
+6 errors generated.
+Compilation failed
+4f56f3c

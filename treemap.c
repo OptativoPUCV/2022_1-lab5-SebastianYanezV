@@ -200,6 +200,8 @@ Pair * firstTreeMap(TreeMap * tree)
 Pair * nextTreeMap(TreeMap * tree) 
 {
     TreeNode *aux;
+    TreeNode *currentAux;
+    int resultado;
 
     if (tree->current->right != NULL)
     {
@@ -207,6 +209,22 @@ Pair * nextTreeMap(TreeMap * tree)
         tree->current = aux;
         return aux->pair;
     }
+    else
+    {
+        currentAux = tree->current;
+        aux = currentAux;
 
+        while (1)
+        {
+            resultado = tree->lower_than(currentAux->pair->key, aux->pair->key);
+            if (resultado == 1) 
+            {
+                tree->current = aux;
+                return aux->pair;
+            }
+
+            aux = aux->parent;
+        }
+    }
     return NULL;
 }

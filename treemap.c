@@ -120,47 +120,53 @@ void removeNode(TreeMap * tree, TreeNode* node)
         }
         return;
     }
-
-    if (node->left != NULL && node->right == NULL)
+    else
     {
-        if (node == node->parent->left)
+        if (node->left != NULL && node->right == NULL)
         {
-            node->parent->left = node->left;
-            node->left->parent = node->parent;
-            free(node);
+            if (node == node->parent->left)
+            {
+                node->parent->left = node->left;
+                node->left->parent = node->parent;
+                free(node);
+            }
+            if (node == node->parent->right)
+            {
+                node->parent->right = node->left;
+                node->left->parent = node->parent;
+                free(node);
+            }
+            return;
         }
-        if (node == node->parent->right)
+        else
         {
-            node->parent->right = node->left;
-            node->left->parent = node->parent;
-            free(node);
+            if (node->left == NULL && node->right != NULL)
+            {
+                if (node == node->parent->left)
+                {
+                    node->parent->left = node->right;
+                    node->right->parent = node->parent;
+                    free(node);
+                }
+                if (node == node->parent->right)
+                {
+                    node->parent->right = node->right;
+                    node->right->parent = node->parent;
+                    free(node);
+                }
+                return;
+            }
+            else
+            {
+                if (node->left != NULL && node->right != NULL)
+                {
+                    TreeNode *aux = minimum(node->right);
+                    node->pair = aux->pair;
+                    removeNode(tree, aux);
+                    return;
+                }
+            }
         }
-        return;
-    }
-
-    if (node->left == NULL && node->right != NULL)
-    {
-        if (node == node->parent->left)
-        {
-            node->parent->left = node->right;
-            node->right->parent = node->parent;
-            free(node);
-        }
-        if (node == node->parent->right)
-        {
-            node->parent->right = node->right;
-            node->right->parent = node->parent;
-            free(node);
-        }
-        return;
-    }
-
-    if (node->left != NULL && node->right != NULL)
-    {
-        TreeNode *aux = minimum(node->right);
-        node->pair = aux->pair;
-        removeNode(tree, aux);
-        return;
     }
 }
 

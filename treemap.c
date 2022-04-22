@@ -160,6 +160,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
         node->pair->key = aux->pair->key;
         node->pair->value = aux->pair->value;
         removeNode(tree, aux);
+        return;
     }
 }
 

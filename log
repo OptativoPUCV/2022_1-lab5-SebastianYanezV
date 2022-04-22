@@ -334,3 +334,9 @@ Fri Apr 22 11:45:34 -04 2022:
  tests:  22|3
 total_score: 45/70
 05f29ea
+Fri Apr 22 11:49:29 -04 2022: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  22|3
+total_score: 45/70
+14cfc90

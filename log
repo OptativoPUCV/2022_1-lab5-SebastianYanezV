@@ -306,3 +306,13 @@ Fri Apr 22 11:39:53 -04 2022:
  tests:  22|3
 total_score: 45/70
 ca7be71
+Fri Apr 22 11:40:39 -04 2022: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+./treemap.c:256:58: error: use of undeclared identifier 'key'
+            resultado = tree->lower_than(aux->pair->key, key);
+                                                         ^
+1 error generated.
+Compilation failed
+8b95db2

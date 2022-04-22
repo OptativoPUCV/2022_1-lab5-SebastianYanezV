@@ -249,7 +249,7 @@ Pair * nextTreeMap(TreeMap * tree)
     else
     {
         currentAux = tree->current;
-        aux = currentAux->parent;
+        aux = currentAux;
 
         while (1)
         {

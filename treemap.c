@@ -268,7 +268,7 @@ Pair * nextTreeMap(TreeMap * tree)
             }
 
             aux = aux->parent;
+            if (aux == NULL) return NULL;
         }
     }
-    return NULL;
 }

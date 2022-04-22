@@ -259,6 +259,7 @@ Pair * nextTreeMap(TreeMap * tree)
 
         while (1)
         {
+            if (aux == NULL) return NULL;
             resultado = tree->lower_than(aux->pair->key, currentAux->pair->key);
 
             if (resultado == 1) 
@@ -268,7 +269,6 @@ Pair * nextTreeMap(TreeMap * tree)
             }
 
             aux = aux->parent;
-            if (aux == NULL) return NULL;
         }
     }
 }

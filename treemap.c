@@ -206,7 +206,7 @@ Pair * upperBound(TreeMap * tree, void* key)
     if (pairBuscado != NULL) return pairBuscado;
 
     TreeNode *aux = tree->root;
-    TreeNode *UBNode;
+    TreeNode *UBNode = aux;
     int resultado, upperbound;
 
     while (aux != NULL)

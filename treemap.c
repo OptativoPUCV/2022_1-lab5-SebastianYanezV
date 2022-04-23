@@ -247,11 +247,10 @@ Pair * nextTreeMap(TreeMap * tree)
     else
     {
         currentAux = tree->current;
-        aux = currentAux->parent;
+        aux = currentAux;
 
         while (1)
         {
-            if (aux == NULL) return NULL;
             resultado = tree->lower_than(aux->pair->key, currentAux->pair->key);
 
             if (resultado == 1) 
@@ -259,8 +258,9 @@ Pair * nextTreeMap(TreeMap * tree)
                 tree->current = aux;
                 return aux->pair;
             }
+            else aux = aux->parent;
 
-            aux = aux->parent;
+            if (aux == NULL) return NULL;
         }
     }
 }

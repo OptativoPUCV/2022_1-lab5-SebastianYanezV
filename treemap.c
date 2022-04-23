@@ -216,15 +216,16 @@ Pair * upperBound(TreeMap * tree, void* key)
         if (resultado == 1)
         {
             aux = aux->left;
-            resultado = tree->lower_than(key, aux->pair->key);
-            if (resultado == 1) UB = aux;
+
         }
         else 
         {
             aux = aux->right;
             resultado = tree->lower_than(key, aux->pair->key);
-            if (resultado == 1) UB = aux;
-
+            if (resultado == 1 && aux->left != NULL)
+            {
+                UB = aux;
+            } 
         }
     }
 

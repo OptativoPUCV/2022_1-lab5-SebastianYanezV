@@ -248,6 +248,7 @@ Pair * nextTreeMap(TreeMap * tree)
     {
         currentAux = tree->current;
         aux = currentAux;
+        printf("%d", *(int*) currentAux->pair->key);
 
         while (1)
         {

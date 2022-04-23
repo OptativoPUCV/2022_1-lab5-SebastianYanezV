@@ -251,13 +251,11 @@ Pair * nextTreeMap(TreeMap * tree)
 
         while (1)
         {
-            //resultado = tree->lower_than(aux->pair->key, currentAux->pair->key);
             resultado = tree->lower_than(currentAux->pair->key, aux->pair->key);
 
             if (resultado == 1) 
             {
                 tree->current = aux;
-                printf("%d", *(int*) aux->pair->key);
                 return aux->pair;
             }
             else aux = aux->parent;

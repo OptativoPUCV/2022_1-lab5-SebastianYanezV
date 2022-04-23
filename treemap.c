@@ -236,7 +236,7 @@ Pair * nextTreeMap(TreeMap * tree)
 {
     TreeNode *aux;
     TreeNode *currentAux;
-    int resultado, resultado2;
+    int resultado;
 
     if (tree->current->right != NULL)
     {
@@ -252,9 +252,8 @@ Pair * nextTreeMap(TreeMap * tree)
         while (1)
         {
             resultado = tree->lower_than(aux->pair->key, currentAux->pair->key);
-            resultado2 = tree->lower_than(aux->parent->pair->key, aux->pair->key);
 
-            if (resultado == 1  && resultado2 == 1) 
+            if (resultado == 1) 
             {
                 tree->current = aux;
                 printf("%d", *(int*) aux->pair->key);

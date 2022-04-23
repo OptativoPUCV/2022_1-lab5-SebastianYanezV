@@ -459,3 +459,9 @@ Sat Apr 23 13:39:10 -04 2022:
  1 file changed, 3 insertions(+), 3 deletions(-)
  tests:  0|0
 75b9570
+Sat Apr 23 13:39:31 -04 2022: 
+ treemap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  23|2
+total_score: 50/70
+d9ca76c

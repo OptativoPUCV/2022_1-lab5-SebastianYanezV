@@ -205,7 +205,7 @@ Pair * upperBound(TreeMap * tree, void* key)
 
     if (pairBuscado != NULL) return pairBuscado;
 
-    TreeNode *aux = tree->root;
+    /*TreeNode *aux = tree->root;
     TreeNode *UB = aux;
     int resultado;
 
@@ -236,9 +236,9 @@ Pair * upperBound(TreeMap * tree, void* key)
 
             }
         }
-    }
+    }*/
 
-    return UB->pair;
+    return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 

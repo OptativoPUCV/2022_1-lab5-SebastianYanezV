@@ -256,6 +256,7 @@ Pair * nextTreeMap(TreeMap * tree)
             if (resultado == 1) 
             {
                 tree->current = aux;
+                printf("%d", *(int*) aux->pair->key);
                 return aux->pair;
             }
             else aux = aux->parent;

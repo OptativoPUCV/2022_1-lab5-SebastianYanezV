@@ -226,7 +226,7 @@ Pair * upperBound(TreeMap * tree, void* key)
         }
         else 
         {
-            aux = aux->left;
+            aux = aux->right;
         }
     }
 

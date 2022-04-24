@@ -210,18 +210,18 @@ Pair * upperBound(TreeMap * tree, void* key)
     int resultado;
     while (aux != NULL)
     {
-        resultado = tree->lower_than(key, aux->pair->key);
+        resultado = tree->lower_than(aux->pair->key, key);
         if (resultado == 1)
         {
             resultado = tree->lower_than(UB->pair->key, aux->pair->key);
             if (resultado == 1) UB = aux;
+            else UB = aux;
             aux = aux->right;
         }
         else 
         {
             resultado = tree->lower_than(UB->pair->key, aux->pair->key);
             if (resultado == 1) UB = aux;
-            else UB = aux;
             aux = aux->left;
         }
     }

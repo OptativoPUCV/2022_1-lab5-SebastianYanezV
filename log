@@ -586,3 +586,9 @@ In file included from test.c:4:
 1 error generated.
 Compilation failed
 edd4d7f
+Sun Apr 24 17:44:20 -04 2022: 
+ treemap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ tests:  26|1
+total_score: 60/70
+4d6fec5

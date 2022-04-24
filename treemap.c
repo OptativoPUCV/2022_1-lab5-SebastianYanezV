@@ -211,19 +211,20 @@ Pair * upperBound(TreeMap * tree, void* key)
 
     while (aux != NULL)
     {
-        resultado = tree->lower_than(aux->pair->key, key);
+        //resultado = tree->lower_than(aux->pair->key, key);
 
-        if (resultado == 1)
+        if (tree->lower_than(aux->pair->key, key) == 1)
         {
-            resultado = tree->lower_than(UB->pair->key, aux->pair->key);
-            if (resultado == 1) UB = aux;
+            //resultado = tree->lower_than(UB->pair->key, aux->pair->key);
+            if (tree->lower_than(UB->pair->key, aux->pair->key) == 1) UB = aux;
             else UB = aux;
             aux = aux->right;
         }
         else 
         {
-            resultado = tree->lower_than(UB->pair->key, aux->pair->key);
-            if (resultado == 1) UB = aux;
+            if (tree->lower_than(key, aux->pair->key) == 1)
+            //resultado = tree->lower_than(UB->pair->key, aux->pair->key);
+            if (tree->lower_than(UB->pair->key, aux->pair->key) == 1) UB = aux;
             else aux = aux->left;
         }
     }

@@ -576,3 +576,13 @@ Sun Apr 24 17:40:10 -04 2022:
  tests:  26|1
 total_score: 60/70
 bb1fa70
+Sun Apr 24 17:43:21 -04 2022: 
+ treemap.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+./treemap.c:228:13: error: add explicit braces to avoid dangling else [-Werror,-Wdangling-else]
+            else aux = aux->left;
+            ^
+1 error generated.
+Compilation failed
+edd4d7f

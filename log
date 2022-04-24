@@ -604,3 +604,13 @@ Sun Apr 24 17:49:35 -04 2022:
  tests:  26|1
 total_score: 60/70
 b4ca686
+Sun Apr 24 17:50:01 -04 2022: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+./treemap.c:238:12: error: incompatible pointer types returning 'TreeNode *' (aka 'struct TreeNode *') from a function with result type 'Pair *' (aka 'struct Pair *') [-Werror,-Wincompatible-pointer-types]
+    return UB;
+           ^~
+1 error generated.
+Compilation failed
+71d487a

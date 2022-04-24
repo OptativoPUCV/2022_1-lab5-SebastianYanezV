@@ -217,7 +217,7 @@ Pair * upperBound(TreeMap * tree, void* key)
             if (resultado == 1) 
             {
                 UB = aux;
-                printf("%d___", *(int*) UB->pair->key);
+                //printf("%d___", *(int*) UB->pair->key);
             }
             aux = aux->right;
         }
@@ -227,7 +227,7 @@ Pair * upperBound(TreeMap * tree, void* key)
             if (resultado == 1) 
             {
                 UB = aux;
-                //printf("%d___", *(int*) UB->pair->key);
+                printf("%d___", *(int*) UB->pair->key);
             }
             aux = aux->left;
         }

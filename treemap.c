@@ -205,39 +205,28 @@ Pair * upperBound(TreeMap * tree, void* key)
 
     if (pairBuscado != NULL) return pairBuscado;
 
-    /*TreeNode *aux = tree->root;
+    TreeNode *aux = tree->root;
     TreeNode *UB = aux;
     int resultado;
 
     while (aux != NULL)
     {
-        resultado = tree->lower_than(key, aux->pair->key);
+        resultado = tree->lower_than(aux->pair->key, key);
 
         if (resultado == 1)
         {
-            aux = aux->left;
-            resultado = tree->lower_than(aux->pair->key, key);
-            if (resultado == 1) continue;
-            else
-            {
-                resultado = tree->lower_than(aux->pair->key, UB->pair->key);
-                if (resultado == 1) UB = aux;
-            }
+            resultado = tree->lower_than(UB->pair->key, aux->pair->key);
+            if (resultado == 1) UB = aux;
+            else aux = aux->right;
         }
         else 
         {
-            aux = aux->right;
-            resultado = tree->lower_than(aux->pair->key, key);
-            if (resultado == 1) continue;
-            else
-            {
-                resultado = tree->lower_than(aux->pair->key, UB->pair->key);
-                if (resultado == 1) UB = aux;
-
-            }
+            resultado = tree->lower_than(UB->pair->key, aux->pair->key);
+            if (resultado == 1) UB = aux;
+            else aux = aux->left;
         }
-    }*/
-
+    }
+    
     return NULL;
 }
 
